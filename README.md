@@ -10,9 +10,33 @@
 ## About Laravel-CMS-Docker-App
 
 Practice docker environment with laravel & sail
-    -   Setup docker on your machine according to your environment.
-    -   git clone https://github.com/gmfaruk/laravel-cms-docker-app.git
-    -   cd laravel-cms-docker-app
-    -   docker-compose up [ For run the service]
-    -   docker-compose down  [ For stop service]
-    -   docker exec docker-app-laravel.test-1  php artisan command
+
+## Docker Container Based Laravel
+Sample Project: Realtime chat application built with Laravel WebSockets.
+
+This docker build can be used to run all your Laravel Projects. Our implementation will include containers:
+
+- sail
+- mysql
+- redis
+- meilisearch
+- mailpit
+- selenium
+- mysqladmin
+
+## Docker Important Command
+- Setup docker on your machine according to your environment.
+- git clone https://github.com/gmfaruk/laravel-cms-docker-app.git
+- cd laravel-cms-docker-app
+
+- docker ps :: to check globally container status
+- docker-compose ps :: to check dir based container status
+- docker-compose up :: deploy the server
+- docker-compose down :: down the server after each changes
+- docker-compose up --build :: deploy and build the server
+- docker-compose up -d :: hide the terminal command
+- docker exec <container name> <command> :: Example: docker exec docker-app-laravel.test-1 php artisan migrate
+
+## check container logs
+- docker logs -f <container name>
+- docker logs -f mysql
