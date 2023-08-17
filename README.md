@@ -37,6 +37,10 @@ This docker build can be used to run all your Laravel Projects. Our implementati
 - docker-compose up -d :: hide the terminal command
 - docker exec <container name> <command> :: Example: docker exec docker-app-laravel.test-1 php artisan migrate
 
+## Run host and service
+- http://localhost:8001/ :: for run phpmyadmin
+- http://localhost:80 :: for run the localhost application
+
 ## check container logs
 - docker logs -f <container name>
 - docker logs -f mysql
